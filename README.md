@@ -1,82 +1,73 @@
-# 👩‍💻 Aditi Saxena — Portfolio
+# React + TypeScript + Vite
 
-A modern, responsive portfolio built to showcase my work, skills, and approach as a Frontend Engineer.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🔗 Live: https://aditi-saxena.vercel.app
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🚀 About Me
+## React Compiler
 
-Frontend Engineer with a focus on building scalable, performant, and user-friendly web applications.
-I enjoy working on data-driven UIs, optimizing performance, and creating clean, maintainable architectures.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## 🛠️ Tech Stack
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-**Frontend**
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-* React
-* TypeScript
-* Javascript
-* Redux Toolkit
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-**UI & Styling**
-
-* Tailwind CSS
-* React JSS
-* Responsive Design
-
-**Tools & Workflow**
-
-* Git & GitHub
-* Vite
-* VS Code
-
----
-
-## 📂 Featured Projects
-
-### 📊 Retail Planning Dashboard
-
-* Built a dynamic retail dashboard handling complex data across Stores × SKUs × Weeks
-* Implemented derived metrics like Sales, GM Dollars, and GM % with real-time updates
-* Optimized rendering performance for large datasets using AG-Grid
-
-🔗 Live Demo: https://react-retail-planning-dashboard-zf8.vercel.app/
-🔗 GitHub: https://github.com/aditi270800/react-retail-planning-dashboard
-
----
-
-## 🧠 What I Focus On
-
-* Writing clean, scalable React code
-* Optimizing performance for large data-heavy UIs
-* Building reusable and maintainable components
-* Solving real-world frontend problems
-
----
-
-## 📬 Contact
-
-* LinkedIn: https://www.linkedin.com/in/aditi-saxena-a781a51a0/
-* Email: adirak2708@gmail.com
-* GitHub: https://github.com/aditi270800
-
----
-
-## ⚙️ Setup & Run Locally
-
-```bash
-git clone https://github.com/your-username/your-portfolio-repo.git
-cd your-portfolio-repo
-npm install / yarn install
-npm run dev / yarn dev
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## ⭐️ If you like this project
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-Feel free to star the repo or connect with me on LinkedIn!
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
