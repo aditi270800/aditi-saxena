@@ -139,7 +139,7 @@ const Header: React.FC = () => {
           <button
             key={id}
             onClick={() => scrollTo(id)}
-            className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+            className={`cursor-pointer w-1.5 h-1.5 rounded-full transition-all duration-300 ${
               activeSection === id 
                 ? 'bg-accent scale-150 shadow-[0_0_8px_var(--accent)]' 
                 : 'bg-text3 hover:bg-accent2'

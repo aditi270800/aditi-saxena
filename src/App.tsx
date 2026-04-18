@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./components/header";
-import Hero from "./components/hero";
+import Hero from "./conatiner/hero";
+import Skills from "./conatiner/skills";
 
 const App = () => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const App = () => {
       <main className="relative">
         <Header />
         <Hero />
+        <Skills />
       </main>
     </div>
   );
