@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio built to showcase my work, skills, and approach as a Frontend Engineer.
 
-🔗 Live: https://aditi-saxena.vercel.app
+🔗 Live: https://aditi-saxena-portfolio.vercel.app/
 
 ---
 
