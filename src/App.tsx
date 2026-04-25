@@ -4,6 +4,8 @@ import Hero from "./container/hero";
 import Skills from "./container/skills";
 import Experience from "./container/experience";
 import Education from "./container/education";
+import Projects from "./container/project";
+import Achievements from "./container/achievements";
 
 const App = () => {
   useEffect(() => {
@@ -19,6 +21,8 @@ const App = () => {
         <Skills />
         <Experience />
         <Education />
+        <Projects />
+        <Achievements />
       </main>
     </div>
   );
