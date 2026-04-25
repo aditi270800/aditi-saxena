@@ -111,4 +111,44 @@ const extraDetails = [
   "Core Skills: React.js, JavaScript, TypeScript, HTML5, CSS3, Responsive Web Design, UI Development, Frontend Architecture, Web Performance, Performance Optimization, Node JS(Learning).",
 ];
 
-export { skills, experience, education, extraDetails };
+const project = [
+  {
+    title: "Retail Planning Dashboard",
+    description:
+      "Developed a scalable retail planning application to manage complex Store × SKU level data and simulate real-world business workflows. Built with React, TypeScript, and Redux, the application supports dynamic planning, real-time financial computations (Sales, GM, GM%), and interactive analytics. Engineered a high-performance grid handling 10k+ records, leveraging virtualization and memoization to significantly reduce re-renders and maintain smooth UI performance. Improved load performance using code splitting and lazy loading, and implemented efficient state management for predictable data flow. Added interactive visualizations to surface actionable insights for decision-making. Focused on performance, scalability, and clean architecture to deliver a responsive experience in data-intensive environments.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "AG-Grid",
+      "Recharts",
+      "Performance Optimization",
+      "State Management",
+    ],
+    url: {
+      website: "https://react-retail-planning-dashboard-zf8.vercel.app/",
+      github: "https://github.com/aditi270800/react-retail-planning-dashboard",
+    },
+  },
+];
+
+const achievements = [
+  {
+    title: "Frontend Leadership – Collection Portal",
+    description:
+      "Led frontend development and delivered the project ahead of deadline, exceeding client expectations with a performant and scalable solution.",
+  },
+  {
+    title: "Outstanding Development Award – Orange Portal",
+    description:
+      "Recognized for owning and delivering a production-grade frontend system with strong focus on scalability, performance, and reliability.",
+  },
+  {
+    title: "2nd Place – Hackathon (AI Product)",
+    description:
+      "Developed an AI-powered application with end-to-end UI, collaborating across teams to build and demo a complete working solution.",
+  },
+];
+
+export { skills, experience, education, extraDetails, project, achievements };
