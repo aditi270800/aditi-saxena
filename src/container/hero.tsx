@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Download, ChevronRight, MapPin, Target, Zap } from "lucide-react";
+import { Download, MapPin, Target, Zap } from "lucide-react";
 import Github from "../assets/Icons/github";
 import Linkedin from "../assets/Icons/linkedin";
 import MarqueeMessage from "../components/marqueeMessage";
@@ -81,12 +81,12 @@ const Hero: React.FC = () => {
               ].map((social, i) => (
                 <a
                   key={i}
-                  href={social.link}
+                  href={social?.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full glass-card grid place-items-center text-text2 hover:text-accent hover:border-accent"
                 >
-                  {social.icon}
+                  {social?.icon}
                 </a>
               ))}
             </div>
@@ -98,18 +98,18 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {metaItems.map((score, idx) => (
+          {metaItems?.map((score, idx) => (
             <div
               key={idx}
               className="flex items-center gap-4 glass-card p-4 border-l-4 border-l-accent hover:translate-x-2 shadow-xl"
             >
               <span className="text-accent">{score.icon}</span>
               <div className="flex flex-col gap-1">
-                <div className="font-head text-l font-black text-text">
-                  {score.value}
+                <div className="font-sans text-l font-extrabold text-text">
+                  {score?.value}
                 </div>
                 <div className="font-mono text-[11px] uppercase tracking-widest text-text3">
-                  {score.label}
+                  {score?.label}
                 </div>
               </div>
             </div>

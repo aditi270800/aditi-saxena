@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Header from "./components/header";
-import Hero from "./conatiner/hero";
-import Skills from "./conatiner/skills";
+import Hero from "./container/hero";
+import Skills from "./container/skills";
+import Experience from "./container/experience";
+import Education from "./container/education";
 
 const App = () => {
   useEffect(() => {
@@ -15,6 +17,8 @@ const App = () => {
         <Header />
         <Hero />
         <Skills />
+        <Experience />
+        <Education />
       </main>
     </div>
   );

@@ -9,7 +9,7 @@ import {
   Layers,
   Cloud,
 } from "lucide-react";
-import { skills } from "../components/constant";
+import { skills } from "../global/constant";
 
 const iconMap: Record<string, any> = {
   Frontend: Layout,
@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((group, idx) => {
+          {skills?.map((group, idx) => {
             const Icon = iconMap[group.category] || Cpu;
             return (
               <motion.div
@@ -51,11 +51,11 @@ const Skills: React.FC = () => {
                 </div>
 
                 <h3 className="font-head text-lg font-bold text-text mb-6">
-                  {group.category}
+                  {group?.category}
                 </h3>
 
                 <div className="flex flex-wrap gap-2.5">
-                  {group.items.map((skill, sIdx) => (
+                  {group?.items?.map((skill, sIdx) => (
                     <span
                       key={sIdx}
                       className="px-3 py-1.5 rounded-lg bg-surface2 border border-border text-text2 font-mono text-[11px] tracking-wide hover:border-accent hover:text-accent transition-all cursor-default"
