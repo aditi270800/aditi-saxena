@@ -151,4 +151,26 @@ const achievements = [
   },
 ];
 
-export { skills, experience, education, extraDetails, project, achievements };
+const basicsDetails = {
+  name: "Aditi Saxena",
+  title: "Senior Software Engineer",
+  summary:
+    "Frontend Engineer with 3+ years of experience building scalable web applications using React.js, JavaScript, and TypeScript. Specialized in creating high-performance, responsive interfaces that deliver intuitive user experiences. Currently expanding skill set into React Native while deepening expertise in modern frontend architecture and scalable UI systems.",
+  location: "Gurugram, India",
+  email: "adirak2708@gmail.com",
+  phone: "+91-8630381537",
+  links: {
+    linkedin: "https://www.linkedin.com/in/aditi-saxena-a781a51a0",
+    github: "https://github.com/aditi270800",
+  },
+};
+
+export {
+  skills,
+  experience,
+  education,
+  extraDetails,
+  project,
+  achievements,
+  basicsDetails,
+};
