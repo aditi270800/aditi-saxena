@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "./components/header";
-import Hero from "./container/hero";
-import Skills from "./container/skills";
-import Experience from "./container/experience";
-import Education from "./container/education";
-import Projects from "./container/project";
-import Achievements from "./container/achievements";
-import Contact from "./container/contact";
 import Splash from "./components/loader";
 import AnimatedBackground from "./components/animatedBackground";
+const Achievements = lazy(() => import("./container/achievements"));
+const Contact = lazy(() => import("./container/contact"));
+const Education = lazy(() => import("./container/education"));
+const Experience = lazy(() => import("./container/experience"));
+const Hero = lazy(() => import("./container/hero"));
+const Projects = lazy(() => import("./container/project"));
+const Skills = lazy(() => import("./container/skills"));
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
