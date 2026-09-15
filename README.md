@@ -69,7 +69,7 @@ I enjoy working on data-driven UIs, optimizing performance, and creating clean, 
 ## ⚙️ Setup & Run Locally
 
 ```bash
-git clone https://github.com/your-username/your-portfolio-repo.git
+git clone https://github.com/aditi270800/aditi-saxena.git
 cd your-portfolio-repo
 npm install / yarn install
 npm run dev / yarn dev
