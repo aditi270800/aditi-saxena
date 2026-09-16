@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, MapPin, Calendar, School } from 'lucide-react';
-import { education, extraDetails } from '../global/constant';
+import { education } from '../global/constant';
 
 const Education: React.FC = () => {
   return (
@@ -47,24 +47,6 @@ const Education: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        {extraDetails && extraDetails?.length > 0 && (
-          <motion.div 
-            className="mt-20 p-8 glass-card border-l-4 border-l-accent3 bg-accent3/5"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="s-label !mb-6 text-accent3 before:bg-accent3">Additional Focus</div>
-            <div className="grid lg:grid-cols-2 gap-10">
-              {extraDetails?.map((item, idx) => (
-                <p key={idx} className="text-text2 text-sm leading-relaxed italic">
-                  "{item}"
-                </p>
-              ))}
-            </div>
-          </motion.div>
-        )}
       </div>
     </section>
   );

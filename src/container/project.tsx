@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Monitor, Layers, Cpu, Zap } from "lucide-react";
+import { ExternalLink, Monitor, Layers, Cpu, Zap, CheckCircle2 } from "lucide-react";
 import Github from "../assets/Icons/github";
 import { project } from "../global/constant";
 
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
                     <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 grid place-items-center text-accent">
                       <Layers size={24} />
                     </div>
-                    <div className="flex gap-4">
+                    {/* <div className="flex gap-4">
                       {project?.url?.github && (
                         <a
                           href={project.url.github}
@@ -61,16 +61,29 @@ const Projects: React.FC = () => {
                           <ExternalLink size={20} />
                         </a>
                       )}
-                    </div>
+                    </div> */}
                   </div>
 
                   <div>
                     <h3 className="text-2xl md:text-3xl font-head font-bold text-text mb-4 group-hover:text-accent transition-colors">
                       {project?.title}
                     </h3>
-                    <p className="text-text2 leading-relaxed text-sm md:text-base">
+                    {/* <p className="text-text2 leading-relaxed text-sm md:text-base">
                       {project?.description}
-                    </p>
+                    </p> */}
+                    <ul className="space-y-4 pt-6 border-t border-border mt-2">
+                      {project?.description.map((bullet, bIdx) => (
+                        <li
+                          key={bIdx}
+                          className="flex gap-4 text-text2 text-[15px] leading-relaxed group/li"
+                        >
+                          <span className="mt-1 text-accent flex-shrink-0 group-hover/li:scale-110 transition-transform">
+                            <CheckCircle2 size={16} />
+                          </span>
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mt-4">
@@ -84,7 +97,7 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="mt-8 pt-8 border-t border-border/30 grid grid-cols-2 gap-6">
+                  {/* <div className="mt-8 pt-8 border-t border-border/30 grid grid-cols-2 gap-6">
                     <div className="flex items-center gap-3">
                       <div className="text-accent">
                         <Cpu size={18} />
@@ -111,7 +124,7 @@ const Projects: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

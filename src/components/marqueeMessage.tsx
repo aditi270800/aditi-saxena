@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const MarqueeMessage: React.FC = () => {
   const items = [
-    "3+ YEARS EXPERIENCE",
-    "REACT DEVELOPER",
-    "TYPESCRIPT JAVASCRIPT",
-    "REDUX/ZUSTAND",
-    "PERFORMANCE DRIVEN",
-    "SCALABLE SYSTEMS",
-    "CLEAN CODE ENTHUSIAST",
-    "CORE WEB VITALS OPTIMIZED",
+    "TECHNICAL LEAD",
+    "4+ YEARS EXPERIENCE",
+    "REACT / TYPESCRIPT",
+    "NODE.JS / EXPRESS",
+    "REDUX / ZUSTAND",
+    "30% FASTER LOAD TIMES",
+    "90% TEST COVERAGE",
+    "MENTORING 2 ENGINEERS",
   ];
 
   return (
@@ -24,7 +24,7 @@ const MarqueeMessage: React.FC = () => {
           {Array.from({ length: 4 }).map((_, i) => (
             <React.Fragment key={i}>
               {items.map((text, idx) => (
-                <span 
+                <span
                   key={idx}
                   className="font-mono text-[11px] font-bold text-white tracking-[0.2em] flex items-center gap-4"
                 >

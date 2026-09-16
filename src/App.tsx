@@ -10,6 +10,7 @@ const Experience = lazy(() => import("./container/experience"));
 const Hero = lazy(() => import("./container/hero"));
 const Projects = lazy(() => import("./container/project"));
 const Skills = lazy(() => import("./container/skills"));
+const About = lazy(() => import("./container/about"));
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -33,6 +34,7 @@ const App = () => {
 
           <main className="relative">
             <Hero />
+            <About />
             <Skills />
             <Experience />
             <Education />
@@ -47,7 +49,7 @@ const App = () => {
                   Aditi Saxena
                 </div>
                 <div className="text-text3 text-xs font-mono uppercase tracking-[0.2em]">
-                  Senior Software Engineer • Portfolio
+                  Technical Lead • Portfolio
                 </div>
               </div>
 
@@ -56,9 +58,9 @@ const App = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   Available for New Opportunities
                 </div>
-                <div>
+                {/* <div>
                   © {new Date().getFullYear()} • Crafted in Gurugram, India
-                </div>
+                </div> */}
               </div>
             </div>
           </footer>
