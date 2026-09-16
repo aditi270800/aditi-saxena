@@ -1,6 +1,6 @@
 # 👩‍💻 Aditi Saxena — Portfolio
 
-A modern, responsive portfolio built to showcase my work, skills, and approach as a Frontend Engineer.
+A modern, responsive portfolio built to showcase my work, skills, and approach as a Technical Lead specializing in React.js, TypeScript, and full-stack frontend/backend delivery.
 
 🔗 Live: https://aditi-saxena-portfolio.vercel.app/
 
@@ -8,8 +8,7 @@ A modern, responsive portfolio built to showcase my work, skills, and approach a
 
 ## 🚀 About Me
 
-Frontend Engineer with a focus on building scalable, performant, and user-friendly web applications.
-I enjoy working on data-driven UIs, optimizing performance, and creating clean, maintainable architectures.
+Technical Lead with 4+ years of experience building and leading scalable, performant web applications — owning frontend architecture in React.js/TypeScript and backend development in Node.js/Express.js. I enjoy working on data-driven UIs, mentoring engineers, and creating clean, maintainable architectures across the full stack.
 
 ---
 
@@ -20,7 +19,14 @@ I enjoy working on data-driven UIs, optimizing performance, and creating clean, 
 * React
 * TypeScript
 * Javascript
-* Redux Toolkit
+* Redux Toolkit / Zustand / Context API
+
+**Backend**
+
+* Node.js
+* Express.js
+* REST APIs
+* Swagger/OpenAPI
 
 **UI & Styling**
 
@@ -32,7 +38,8 @@ I enjoy working on data-driven UIs, optimizing performance, and creating clean, 
 
 * Git & GitHub
 * Vite
-* VS Code
+* Postman
+* JIRA
 
 ---
 
@@ -51,10 +58,11 @@ I enjoy working on data-driven UIs, optimizing performance, and creating clean, 
 
 ## 🧠 What I Focus On
 
-* Writing clean, scalable React code
-* Optimizing performance for large data-heavy UIs
-* Building reusable and maintainable components
-* Solving real-world frontend problems
+* Leading technical architecture across frontend and backend
+* Writing clean, scalable React.js and Node.js/Express.js code
+* Optimizing performance for large, data-heavy UIs
+* Mentoring engineers and driving code-review standards
+* Building reusable, maintainable components and API contracts
 
 ---
 
@@ -70,7 +78,7 @@ I enjoy working on data-driven UIs, optimizing performance, and creating clean, 
 
 ```bash
 git clone https://github.com/aditi270800/aditi-saxena.git
-cd your-portfolio-repo
+cd aditi-saxena
 npm install / yarn install
 npm run dev / yarn dev
 ```
