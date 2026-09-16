@@ -8,27 +8,26 @@ import MarqueeMessage from "../components/marqueeMessage";
 const Hero: React.FC = () => {
   const metaItems = [
     { icon: <MapPin size={14} />, label: "Location", value: "Gurugram" },
-    { icon: <Target size={14} />, label: "Goal", value: "Scalable Frontend" },
     { icon: <Zap size={14} />, label: "Availability", value: "Immediate" },
   ];
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = `${import.meta.env.BASE_URL}assets/Aditi_Saxena_Resume.pdf`;
-    link.download = "Aditi_Saxena_Resume.pdf";
+    link.href = `${import.meta.env.BASE_URL}assets/Aditi_Saxena.pdf`;
+    link.download = "Aditi_Saxena.pdf";
     link.click();
   };
 
   return (
     <section
       id="hero"
-      className="min-h-screen pt-32 flex flex-col justify-between overflow-hidden relative"
+      className="min-h-screen pt-32 flex flex-col justify-around overflow-hidden relative"
     >
-      <div className="px-[clamp(20px,8vw,120px)] w-full max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_auto] gap-12 items-center">
+      <div className="px-[clamp(20px,8vw,120px)] w-full max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_auto] items-center">
         {/* Left Side: Text */}
         <div className="max-w-[720px]">
-          <motion.h1
-            className="font-head text-[clamp(48px,12vw,110px)] font-extrabold tracking-[-0.04em] leading-[0.9] text-text mb-8 pr-4"
+          <motion.h5
+            className="font-head text-[clamp(12px,8vw,60px)] font-extrabold tracking-[-0.04em] leading-[0.9] text-text mb-8 pr-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -47,16 +46,17 @@ const Hero: React.FC = () => {
             >
               Saxena
             </motion.span>
-          </motion.h1>
+          </motion.h5>
 
           <motion.p
-            className="text-text2 text-[clamp(16px,2vw,19px)] leading-relaxed max-w-[580px] mb-12"
+            className="text-text2 text-[clamp(12px,1vw,14px)] leading-relaxed max-w-[580px] mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Specialized in building high-performance, scalable web architectures
-            that bridge technology and business impact.
+            Technical Lead building React/TypeScript frontends and Node.js
+            backends for production apps used by real customers. 4+ years in,
+            currently leading architecture and mentoring a team of 2.
           </motion.p>
 
           <motion.div
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
         </div>
-        <motion.div
+        {/* <motion.div
           className="hidden lg:flex flex-col gap-5 w-[320px]"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -114,10 +114,9 @@ const Hero: React.FC = () => {
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
-
-      <div className="mt-20">
+      <div>
         <MarqueeMessage />
       </div>
     </section>

@@ -29,7 +29,7 @@ const Skills: React.FC = () => {
       <div className="max-w-[1400px] mx-auto">
         {/* <div className="s-label" data-aos="fade-right">Technical Ecosystem</div> */}
         <h2 className="s-title" data-aos="fade-up">
-          Technical Skills
+          Skills
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
